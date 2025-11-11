@@ -111,13 +111,13 @@ async def hf_model_if_cache(
     messages.append({"role": "user", "content": prompt})
     kwargs.pop("hashing_kv", None)
     input_prompt = ""
-    print("\n\n#######################################\n\n")
-    print(messages)
-    print("\n\n#######################################\n\n")
-    return """{
-            "answer_type_keywords": ["PERSON", "idea", "activity"],
-            "entities_from_query": ["Jennifer", "Li Hua", "Jake", "match"]
-            }<|im_end|>"""
+    # print("\n\n#######################################\n\n")
+    # print(messages)
+    # print("\n\n#######################################\n\n")
+    # return """{
+    #         "answer_type_keywords": ["PERSON", "idea", "activity"],
+    #         "entities_from_query": ["Jennifer", "Li Hua", "Jake", "match"]
+    #         }<|im_end|>"""
 
 
     try:

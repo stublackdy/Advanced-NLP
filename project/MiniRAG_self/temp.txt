@@ -1,0 +1,133 @@
+-Goal-
+Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.
+
+-Steps-
+1. Identify all entities. For each identified entity, extract the following information:
+- entity_name: Name of the entity, use same language as input text. If English, capitalized the name.
+- entity_type: One of the following types: [organization,person,location,event]
+- entity_description: Comprehensive description of the entity's attributes and activities
+Format each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>
+
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
+For each pair of related entities, extract the following information:
+- source_entity: name of the source entity, as identified in step 1
+- target_entity: name of the target entity, as identified in step 1
+- relationship_description: explanation as to why you think the source entity and the target entity are related to each other
+- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity
+- relationship_keywords: one or more high-level key words that summarize the overarching nature of the relationship, focusing on concepts or themes rather than specific details
+Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_keywords><|><relationship_strength>)
+
+3. Identify high-level key words that summarize the main concepts, themes, or topics of the entire text. These should capture the overarching ideas present in the document.
+Format the content-level key words as ("content_keywords"<|><high_level_keywords>)
+
+4. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.
+
+5. When finished, output <|COMPLETE|>
+
+######################
+-Examples-
+######################
+Example 1:
+
+Entity_types: [person, technology, mission, organization, location]
+Text:
+while Alex clenched his jaw, the buzz of frustration dull against the backdrop of Taylor's authoritarian certainty. It was this competitive undercurrent that kept him alert, the sense that his and Jordan's shared commitment to discovery was an unspoken rebellion against Cruz's narrowing vision of control and order.
+
+Then Taylor did something unexpected. They paused beside Jordan and, for a moment, observed the device with something akin to reverence. “If this tech can be understood..." Taylor said, their voice quieter, "It could change the game for us. For all of us.”
+
+The underlying dismissal earlier seemed to falter, replaced by a glimpse of reluctant respect for the gravity of what lay in their hands. Jordan looked up, and for a fleeting heartbeat, their eyes locked with Taylor's, a wordless clash of wills softening into an uneasy truce.
+
+It was a small transformation, barely perceptible, but one that Alex noted with an inward nod. They had all been brought here by different paths
+################
+Output:
+("entity"<|>"Alex"<|>"person"<|>"Alex is a character who experiences frustration and is observant of the dynamics among other characters.")##
+("entity"<|>"Taylor"<|>"person"<|>"Taylor is portrayed with authoritarian certainty and shows a moment of reverence towards a device, indicating a change in perspective.")##
+("entity"<|>"Jordan"<|>"person"<|>"Jordan shares a commitment to discovery and has a significant interaction with Taylor regarding a device.")##
+("entity"<|>"Cruz"<|>"person"<|>"Cruz is associated with a vision of control and order, influencing the dynamics among other characters.")##
+("entity"<|>"The Device"<|>"technology"<|>"The Device is central to the story, with potential game-changing implications, and is revered by Taylor.")##
+("relationship"<|>"Alex"<|>"Taylor"<|>"Alex is affected by Taylor's authoritarian certainty and observes changes in Taylor's attitude towards the device."<|>"power dynamics, perspective shift"<|>7)##
+("relationship"<|>"Alex"<|>"Jordan"<|>"Alex and Jordan share a commitment to discovery, which contrasts with Cruz's vision."<|>"shared goals, rebellion"<|>6)##
+("relationship"<|>"Taylor"<|>"Jordan"<|>"Taylor and Jordan interact directly regarding the device, leading to a moment of mutual respect and an uneasy truce."<|>"conflict resolution, mutual respect"<|>8)##
+("relationship"<|>"Jordan"<|>"Cruz"<|>"Jordan's commitment to discovery is in rebellion against Cruz's vision of control and order."<|>"ideological conflict, rebellion"<|>5)##
+("relationship"<|>"Taylor"<|>"The Device"<|>"Taylor shows reverence towards the device, indicating its importance and potential impact."<|>"reverence, technological significance"<|>9)##
+("content_keywords"<|>"power dynamics, ideological conflict, discovery, rebellion")<|COMPLETE|>
+#############################
+Example 2:
+
+Entity_types: [person, technology, mission, organization, location]
+Text:
+They were no longer mere operatives; they had become guardians of a threshold, keepers of a message from a realm beyond stars and stripes. This elevation in their mission could not be shackled by regulations and established protocols—it demanded a new perspective, a new resolve.
+
+Tension threaded through the dialogue of beeps and static as communications with Washington buzzed in the background. The team stood, a portentous air enveloping them. It was clear that the decisions they made in the ensuing hours could redefine humanity's place in the cosmos or condemn them to ignorance and potential peril.
+
+Their connection to the stars solidified, the group moved to address the crystallizing warning, shifting from passive recipients to active participants. Mercer's latter instincts gained precedence— the team's mandate had evolved, no longer solely to observe and report but to interact and prepare. A metamorphosis had begun, and Operation: Dulce hummed with the newfound frequency of their daring, a tone set not by the earthly
+#############
+Output:
+("entity"<|>"Washington"<|>"location"<|>"Washington is a location where communications are being received, indicating its importance in the decision-making process.")##
+("entity"<|>"Operation: Dulce"<|>"mission"<|>"Operation: Dulce is described as a mission that has evolved to interact and prepare, indicating a significant shift in objectives and activities.")##
+("entity"<|>"The team"<|>"organization"<|>"The team is portrayed as a group of individuals who have transitioned from passive observers to active participants in a mission, showing a dynamic change in their role.")##
+("relationship"<|>"The team"<|>"Washington"<|>"The team receives communications from Washington, which influences their decision-making process."<|>"decision-making, external influence"<|>7)##
+("relationship"<|>"The team"<|>"Operation: Dulce"<|>"The team is directly involved in Operation: Dulce, executing its evolved objectives and activities."<|>"mission evolution, active participation"<|>9)<|COMPLETE|>
+("content_keywords"<|>"mission evolution, decision-making, active participation, cosmic significance")<|COMPLETE|>
+#############################
+Example 3:
+
+Entity_types: [person, role, technology, organization, event, location, concept]
+Text:
+their voice slicing through the buzz of activity. "Control may be an illusion when facing an intelligence that literally writes its own rules," they stated stoically, casting a watchful eye over the flurry of data.
+
+"It's like it's learning to communicate," offered Sam Rivera from a nearby interface, their youthful energy boding a mix of awe and anxiety. "This gives talking to strangers' a whole new meaning."
+
+Alex surveyed his team—each face a study in concentration, determination, and not a small measure of trepidation. "This might well be our first contact," he acknowledged, "And we need to be ready for whatever answers back."
+
+Together, they stood on the edge of the unknown, forging humanity's response to a message from the heavens. The ensuing silence was palpable—a collective introspection about their role in this grand cosmic play, one that could rewrite human history.
+
+The encrypted dialogue continued to unfold, its intricate patterns showing an almost uncanny anticipation
+#############
+Output:
+("entity"<|>"Sam Rivera"<|>"person"<|>"Sam Rivera is a member of a team working on communicating with an unknown intelligence, showing a mix of awe and anxiety.")##
+("entity"<|>"Alex"<|>"person"<|>"Alex is the leader of a team attempting first contact with an unknown intelligence, acknowledging the significance of their task.")##
+("entity"<|>"Control"<|>"concept"<|>"Control refers to the ability to manage or govern, which is challenged by an intelligence that writes its own rules.")##
+("entity"<|>"Intelligence"<|>"concept"<|>"Intelligence here refers to an unknown entity capable of writing its own rules and learning to communicate.")##
+("entity"<|>"First Contact"<|>"event"<|>"First Contact is the potential initial communication between humanity and an unknown intelligence.")##
+("entity"<|>"Humanity's Response"<|>"event"<|>"Humanity's Response is the collective action taken by Alex's team in response to a message from an unknown intelligence.")##
+("relationship"<|>"Sam Rivera"<|>"Intelligence"<|>"Sam Rivera is directly involved in the process of learning to communicate with the unknown intelligence."<|>"communication, learning process"<|>9)##
+("relationship"<|>"Alex"<|>"First Contact"<|>"Alex leads the team that might be making the First Contact with the unknown intelligence."<|>"leadership, exploration"<|>10)##
+("relationship"<|>"Alex"<|>"Humanity's Response"<|>"Alex and his team are the key figures in Humanity's Response to the unknown intelligence."<|>"collective action, cosmic significance"<|>8)##
+("relationship"<|>"Control"<|>"Intelligence"<|>"The concept of Control is challenged by the Intelligence that writes its own rules."<|>"power dynamics, autonomy"<|>7)##
+("content_keywords"<|>"first contact, control, communication, cosmic significance")<|COMPLETE|>
+#############################
+-Real Data-
+######################
+Entity_types: organization,person,location,event
+Text: Time: 20260929_11:00
+ChaeSong-hwa: Hey everyone! 🌟 I've been diving into some research on binaural tones. They could really enhance our sound and create a unique listening experience for our audience. What do you guys think about experimenting with this? 🎶
+LiHua: That sounds really interesting! I'd love to hear how those binaural tones can change our sound. 😄 Maybe we can test it out in our next jam session? 
+YurikoYamamoto: Absolutely! It could add a whole new dimension to our music. I’m excited to give it a try! Let's see how it blends with our instruments. 🎸🥁🎤
+LiHua: Totally agree! Just imagining the vibes we could create is exciting. Plus, it might be a fun twist to our usual songs! 🎶
+ChaeSong-hwa: For sure! Just think about how we can incorporate that into our practice. It might give our originals a fresh feel too. Let's experiment with it next time we jam! 🥳
+LiHua: Can't wait! It'll be fun to see how we can mix that in. Looking forward to our next practice! 🌟
+ChaeSong-hwa: By the way, have we settled on a date for our next jam? I want to make sure I clear my schedule! 🎤
+YurikoYamamoto: I'm good for any day! Just let us know what works for you guys. I’m looking forward to it! 🎵
+LiHua: How about this Sunday at 8 pm again? It's been our usual time, and it works for me. Let me know if that suits you both! 😄
+YurikoYamamoto: Sounds perfect to me! Looking forward to another great night of music. 🌌
+ChaeSong-hwa: Great! Sunday at 8 pm it is. Can't wait to jam with you all and try out those binaural tones! 🎶
+YurikoYamamoto: Yay! It's going to be awesome! See you all then! ✨
+WolfgangSchulz: Just to clarify, I'm sticking to our usual Sunday for rehearsals, so no need for additional days. Can't wait to play again! 
+WolfgangSchulz: Looking forward to it! It's gonna be a blast! 🎉
+ChaeSong-hwa: I’m excited too! Let's keep the energy high and have some fun! 🥳
+ChaeSong-hwa: Share any cool inspirations or ideas you find while exploring the binaural tones! It’ll be fun to discuss them on Sunday! 
+YurikoYamamoto: Absolutely! I’ll keep an eye out for anything interesting. Let’s make this jam session memorable! 🎵✨
+YurikoYamamoto: I can't wait for Sunday! It's going to be such a creative exploration! 🥳
+ChaeSong-hwa: Hey, let's also pick a couple of songs to try out with the binaural tones! It could be fun to see how they transform our favorites! 🎶
+YurikoYamamoto: Great idea! We can mix in some of our previous songs with the new tones. It'll be exciting to see how they turn out! 🎸✨
+ChaeSong-hwa: I'm looking forward to all the magic we'll create! This is going to be an amazing musical journey together! 🎤🌈
+LiHua: I love the enthusiasm! It's such a great vibe, and I'm excited for what's to come! Let's make it a night to remember! 🎶🎉
+LiHua: I can't wait for our jam session! The combination of our instruments and the binaural tones will be unique! See you all on Sunday! 🎵😊
+YurikoYamamoto: It's going to be a fantastic experience! I'm so glad we're all on this creative journey together! See you all soon! 🌟
+WolfgangSchulz: Let's make this fun! Excited to see everyone on Sunday! 🎶
+LiHua: It's going to be awesome! Let's bring our A-game and have a blast! 🎉
+LiHua: I'm feeling really pumped for this! Can't wait to connect and explore new sounds together! 🎶✨
+YurikoYamamoto: So much excitement in the air! It's going to be a wonderful experience for all of us! 🎊
+######################
+Output:

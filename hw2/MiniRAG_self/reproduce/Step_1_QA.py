@@ -26,8 +26,8 @@ import argparse
 def get_args():
     parser = argparse.ArgumentParser(description="MiniRAG")
     parser.add_argument("--model", type=str, default="qwen")
-    parser.add_argument("--outputpath", type=str, default="./logs/Default_output.csv")
-    parser.add_argument("--workingdir", type=str, default="./LiHua-World")
+    parser.add_argument("--outputpath", type=str, default="./logs/Default_output2.csv")
+    parser.add_argument("--workingdir", type=str, default="./LiHua-World_old")
     parser.add_argument("--datapath", type=str, default="./dataset/LiHua-World/data/")
     parser.add_argument(
         "--querypath", type=str, default="./dataset/LiHua-World/qa/query_set.csv"
@@ -92,7 +92,7 @@ with open(QUERY_PATH, mode="r", encoding="utf-8") as question_file:
 
 
 def run_experiment(output_path):
-    headers = ["Question", "Gold Answer", "minirag"]
+    headers = ["Question", "Gold Answer", "query", "context_json_data",  "sys_prompt", "minirag"]
 
     q_already = []
     if os.path.exists(output_path):
@@ -120,16 +120,23 @@ def run_experiment(output_path):
             print("Gold_Answer", Gold_Answer)
 
             # try:
-            minirag_answer = (
+            query, context_json_data,  sys_prompt, minirag_answer = (
                 rag.query(QUESTION, param=QueryParam(mode="mini"))
-                .replace("\n", "")
-                .replace("\r", "")
+                # .replace("\n", "")
+                # .replace("\r", "")
             )
+
+
+                # print("\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n\n")
+                # print(f"question: {QUESTION}")
+                # print(f"Context: {minirag_answer}")
+                # print("\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n\n")
             # except Exception as e:
             #     print("Error in minirag_answer", e)
-            #     minirag_answer = "Error"
+            #     minirag_answer = e
 
-            writer.writerow([QUESTION, Gold_Answer, minirag_answer])
+            writer.writerow([QUESTION, Gold_Answer, query, context_json_data,  sys_prompt, minirag_answer])
+            break
 
     print(f"Experiment data has been recorded in the file: {output_path}")
 

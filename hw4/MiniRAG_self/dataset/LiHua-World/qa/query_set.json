@@ -1,0 +1,518 @@
+{
+    "0": {
+        "question": "Did Li Hua send a message to Jennifer thanking her for the new training schedule before he requested a change in his training schedule for Thursday?",
+        "answer": "Yes",
+        "evidence": "20260204_15:00<and>20260204_16:00<and>20260211_19:00",
+        "type": "Multi"
+    },
+    "1": {
+        "question": "Did Yuriko ask Li Hua for help with her studio's homepage before she booked a seat at the \"Central Perk\" cafe?",
+        "answer": "Yes",
+        "evidence": "20260223_15:00<and>20260225_15:00",
+        "type": "Multi"
+    },
+    "2": {
+        "question": "Did Li Hua send a message to Jennifer asking if he can turn the Thursday class to Friday after he requested a change in his training schedule for Thursday?",
+        "answer": "Yes",
+        "evidence": "20260211_19:00<and>20260309_12:00",
+        "type": "Multi"
+    },
+    "3": {
+        "question": "What time does Li Hua watch the movie \"Overwatch 3\"?",
+        "answer": "20260122",
+        "evidence": "20260122_17:00<and>20260121_13:00",
+        "type": "Multi"
+    },
+    "4": {
+        "question": "Who does Li Hua go to watch the movie \"Overwatch 3\" with?",
+        "answer": "Wolfgang",
+        "evidence": "20260122_17:00<and>20260121_13:00",
+        "type": "Multi"
+    },
+    "5": {
+        "question": "Who wished Li Hua a happy Lunar New Year?",
+        "answer": "Adam Smith & Jennifer Moore & Wolfgang Schulz",
+        "evidence": "20260119_11:30<and>20260119_14:30<and>20260119_09:30",
+        "type": "Multi"
+    },
+    "6": {
+        "question": "Who introduced the bread delivery service and recommend Alice for the delivery?",
+        "answer": "HaileyJohnson",
+        "evidence": "20260318_15:00<and>20260329_13:00",
+        "type": "Multi"
+    },
+    "7": {
+        "question": "What is the opportunity that makes Wolfgang and Yuriko acquaitances?",
+        "answer": "LiHua introduce them to each other by saying that they can play music together every Sunday",
+        "evidence": "20260318_15:10<and>20260319_16:00",
+        "type": "Multi"
+    },
+    "8": {
+        "question": "What was the content of the first-ever delivery from Hailey to LiHua and what was LiHua's opinion about it?",
+        "answer": "a fresh sourdough loaf and a bottle of milk and LiHua praises Hailey's bread and milk",
+        "evidence": "20260317_08:00<and>20260318_15:00",
+        "type": "Multi"
+    },
+    "9": {
+        "question": "Did Li Hua send a message to Wolfgang Schulz saying that he has prepared all the delicious food for tonight's Chinese Lunar New Year before Wolfgang sent a message to Li Hua wishing him a happy Lunar New Year?",
+        "answer": "Yes",
+        "evidence": "20260113_11:00<and>20260118_12:00<and>20260119_11:30<and>20260119_14:30<and>20260119_09:30",
+        "type": "Multi"
+    },
+    "10": {
+        "question": "Did Li Hua provide feedback to Jennifer Moore on his new meal plan before he asked her for advice on a healthy meal plan?",
+        "answer": "No",
+        "evidence": "20260115_16:45<and>20260122_15:00",
+        "type": "Multi"
+    },
+    "11": {
+        "question": "Did Li Hua's complaint about the customer who modifies their requirements occur before Wolfgang comforted him?",
+        "answer": "No",
+        "evidence": "20260123_17:30<and>20260131_14:00",
+        "type": "Multi"
+    },
+    "12": {
+        "question": "Did Yuriko tell Li Hua about booking a seat at the \"Central Perk\" cafe before Li Hua sent her a message to confirm the details of their next meeting?",
+        "answer": "Yes",
+        "evidence": "20260225_15:00<and>20260303_09:30",
+        "type": "Multi"
+    },
+    "13": {
+        "question": "What time does Li Hua check in with Adam about moving in?",
+        "answer": "5:30 PM",
+        "evidence": "20260105_14:00",
+        "type": "Single"
+    },
+    "14": {
+        "question": "When was the first time Li Hua had dinner with Wolfgang this year?",
+        "answer": "20260108",
+        "evidence": "20260108_11:00",
+        "type": "Single"
+    },
+    "15": {
+        "question": "Where was the first time Li Hua had dinner with Wolfgang this year?",
+        "answer": "the cozy café downtown",
+        "evidence": "20260108_11:00",
+        "type": "Single"
+    },
+    "16": {
+        "question": "What time is Li Hua's lunch with Wolfgang Schulz at the cozy café downtown?",
+        "answer": "20260108",
+        "evidence": "20260108_11:00",
+        "type": "Single"
+    },
+    "17": {
+        "question": "What is the Wi-Fi password at Li Hua's house?",
+        "answer": "Family123",
+        "evidence": "20260106_09:00",
+        "type": "Single"
+    },
+    "18": {
+        "question": "What does Adam say about having friends over?",
+        "answer": "having friends over occasionally is fine",
+        "evidence": "20260106_09:00",
+        "type": "Single"
+    },
+    "19": {
+        "question": "What house rule does Adam mention?",
+        "answer": "keep noise to a minimum during late hours",
+        "evidence": "20260106_09:00",
+        "type": "Single"
+    },
+    "20": {
+        "question": "What does Li Hua report to Adam on January 6th?",
+        "answer": "the water tab in the apartment is broken",
+        "evidence": "20260106_13:00",
+        "type": "Single"
+    },
+    "21": {
+        "question": "When does Adam confirm the plumber will arrive?",
+        "answer": "tomorrow at 10 AM",
+        "evidence": "20260106_15:00",
+        "type": "Single"
+    },
+    "22": {
+        "question": "What does Li Hua ask Adam about the door hinge?",
+        "answer": "a small repair",
+        "evidence": "20260107_15:00",
+        "type": "Single"
+    },
+    "23": {
+        "question": "What is the name of the gym that Wolfgang recommended LiHua to go to?",
+        "answer": "FitZone",
+        "evidence": "20260111_08:00",
+        "type": "Single"
+    },
+    "24": {
+        "question": "When does Li Hua ask Jennifer Moore about adjusting the protein in her meal plan?",
+        "answer": "20260122",
+        "evidence": "20260122_15:00<and>20260122_15:00",
+        "type": "Multi"
+    },
+    "25": {
+        "question": "What time does Li Hua watch the movie \"Overwatch 3\"?",
+        "answer": "20260122",
+        "evidence": "20260122_17:00<and>20260121_13:00",
+        "type": "Multi"
+    },
+    "26": {
+        "question": "Who does Li Hua go to watch the movie \"Overwatch 3\" with?",
+        "answer": "Wolfgang",
+        "evidence": "20260122_17:00<and>20260121_13:00",
+        "type": "Multi"
+    },
+    "27": {
+        "question": "When does Li Hua plan to celebrate Chinese Lunar New Year?",
+        "answer": "20260118",
+        "evidence": "20260113_11:00",
+        "type": "Single"
+    },
+    "28": {
+        "question": "What does Li Hua plan to celebrate Chinese Lunar New Year?",
+        "answer": "dumplings",
+        "evidence": "20260113_11:00",
+        "type": "Single"
+    },
+    "29": {
+        "question": "Who does Li Hua plan to celebrate Chinese Lunar New Year with?",
+        "answer": "Wolfgang",
+        "evidence": "20260113_11:00",
+        "type": "Single"
+    },
+    "30": {
+        "question": "Li Hua accidentally broke a light fixture once. What did Adam say about the light fixture?",
+        "answer": "I'll arrange for a professional to take a look",
+        "evidence": "20260108_19:00",
+        "type": "Single"
+    },
+    "31": {
+        "question": "Li Hua has a difficult client. When did he solve that client's project?",
+        "answer": "20260209",
+        "evidence": "20260123_17:30<and>20260209_21:00",
+        "type": "Multi"
+    },
+    "32": {
+        "question": "When did Li Hua express frustration about a client changing requirements?",
+        "answer": "20260131_14:00",
+        "evidence": "20260131_14:00",
+        "type": "Single"
+    },
+    "33": {
+        "question": "Who suggested Li Hua keep a clear log of all the changes requested by the client?",
+        "answer": "Wolfgang Schulz",
+        "evidence": "20260131_14:00",
+        "type": "Single"
+    },
+    "34": {
+        "question": "What did Wolfgang Schulz suggest Li Hua to do when Li Hua face a difficult client?",
+        "answer": "keep a clear log of all the changes requested by the client",
+        "evidence": "20260131_14:00",
+        "type": "Single"
+    },
+    "35": {
+        "question": "What does Li Hua plan to do to clear their head?",
+        "answer": "go for a walk and find a new café",
+        "evidence": "20260131_14:00",
+        "type": "Single"
+    },
+    "36": {
+        "question": "What is the name of the café Wolfgang Schulz recommends to Li Hua?",
+        "answer": "The Java Spot",
+        "evidence": "20260131_14:00",
+        "type": "Single"
+    },
+    "37": {
+        "question": "Can Li Hua hang his artworks on the wall?",
+        "answer": "Yes",
+        "evidence": "20260201_20:00",
+        "type": "Single"
+    },
+    "38": {
+        "question": "What does Adam Smith suggest Li Hua use to hang artwork without damaging the walls?",
+        "answer": "use removable hooks",
+        "evidence": "20260201_20:00",
+        "type": "Single"
+    },
+    "39": {
+        "question": "How many times does Li Hua train per week now?",
+        "answer": "2",
+        "evidence": "20260204_15:00 ",
+        "type": "Single"
+    },
+    "40": {
+        "question": "When did Li Hua change the training plan?",
+        "answer": "20260204",
+        "evidence": "20260204_15:00",
+        "type": "Single"
+    },
+    "41": {
+        "question": "What days does Li Hua takes for the training sessions?",
+        "answer": "Tuesdays and Thursdays",
+        "evidence": "20260204_15:00",
+        "type": "Single"
+    },
+    "42": {
+        "question": "When did Li Hua ask Jennifer Moore for tips on dealing with muscle soreness?",
+        "answer": "20260206_16:00",
+        "evidence": "20260206_16:00",
+        "type": "Single"
+    },
+    "43": {
+        "question": "What are some of Jennifer Moore's tips for dealing with muscle soreness?",
+        "answer": "hydration&active recovery&stretching&foam rolling&rest",
+        "evidence": "20260206_16:00",
+        "type": "Single"
+    },
+    "44": {
+        "question": "Why did Li Hua ask for extra exercises to do at home?",
+        "answer": "to complement his training schedule",
+        "evidence": "20260205_13:00",
+        "type": "Single"
+    },
+    "45": {
+        "question": "What exercises did Jennifer Moore suggest Li Hua do at home?",
+        "answer": "bodyweight squats& plank holds&push-ups&lunges&glute bridges",
+        "evidence": "20260205_13:00",
+        "type": "Single"
+    },
+    "46": {
+        "question": "What is Adam Smith's condition for Li Hua to add decorations to the basement?",
+        "answer": "must be reversible and not damage anything",
+        "evidence": "20260219_20:00",
+        "type": "Single"
+    },
+    "47": {
+        "question": "When was the first time Wolfgang went to Li Hua's basement?",
+        "answer": "20260221",
+        "evidence": "20260221_15:00",
+        "type": "Single"
+    },
+    "48": {
+        "question": "What ideas did Wolfgang Schulz suggest for Li Hua's basement practice spot?",
+        "answer": "good lighting&soundproofing&a comfy chair",
+        "evidence": "20260219_20:10",
+        "type": "Single"
+    },
+    "49": {
+        "question": "Why did Adam remind Li Hua not to play guitar late at night?",
+        "answer": "a few neighbors have mentioned they're hearing guitar music late at night",
+        "evidence": "20260216_10:00",
+        "type": "Single"
+    },
+    "50": {
+        "question": "What type of ambiance does YurikoYamamoto want for her studio's homepage?",
+        "answer": "more welcoming and engaging",
+        "evidence": "20260223_15:00",
+        "type": "Single"
+    },
+    "51": {
+        "question": "When did Li Hua invite Adam Smith to check the basement renovation progress?",
+        "answer": "20260223_19:00",
+        "evidence": "20260223_17:00",
+        "type": "Single"
+    },
+    "52": {
+        "question": "What is the name of the café where Li Hua and YurikoYamamoto first meeting to talk about Yuriko's website?",
+        "answer": "Central Perk",
+        "evidence": "20260225_15:00",
+        "type": "Single"
+    },
+    "53": {
+        "question": "What is the essence of YurikoYamamoto Li Hua is helping with her homepage?",
+        "answer": "speech therapy",
+        "evidence": "20260223_15:00",
+        "type": "Single"
+    },
+    "54": {
+        "question": "What type of instrument does Li Hua play in the basement?",
+        "answer": "guitar",
+        "evidence": "20260223_17:00",
+        "type": "Single"
+    },
+    "55": {
+        "question": "When did Adam Smith inform Li Hua about potential issues with the pipes in the basement?",
+        "answer": "20260301_13:00",
+        "evidence": "20260301_13:00",
+        "type": "Single"
+    },
+    "56": {
+        "question": "When did Li Hua inform Adam Smith that the rent was transferred?",
+        "answer": "20260301_10:00",
+        "evidence": "20260301_10:00",
+        "type": "Single"
+    },
+    "57": {
+        "question": "When is the music concert that Wolfgang invites Li Hua to?",
+        "answer": "20260307_18:00",
+        "evidence": "20260302_18:00",
+        "type": "Single"
+    },
+    "58": {
+        "question": "What dish does Li Hua agree to bring to the neighborhood potluck dinner?",
+        "answer": "Homemade pasta salad",
+        "evidence": "20260302_18:45",
+        "type": "Single"
+    },
+    "59": {
+        "question": "Who is Li Hua meeting with to discuss homepage design updates?",
+        "answer": "Yuriko Yamamoto",
+        "evidence": "20260303_09:30",
+        "type": "Single"
+    },
+    "60": {
+        "question": "What new feature does Yuriko Yamamoto consider adding to her studio's homepage?",
+        "answer": "A blog section",
+        "evidence": "20260307_13:00",
+        "type": "Single"
+    },
+    "61": {
+        "question": "What time is the power outage in the neighborhood?",
+        "answer": "2 PM to 3 PM",
+        "evidence": "20260307_14:45",
+        "type": "Single"
+    },
+    "62": {
+        "question": "What suggestions does Li Hua give for promoting the new scheduling feature?",
+        "answer": "Showcase it on social media platforms and include a short tutorial and send out a newsletter to clients",
+        "evidence": "20260311_14:30",
+        "type": "Single"
+    },
+    "63": {
+        "question": "Who invites Li Hua to join the community bake sale?",
+        "answer": "Adam Smith",
+        "evidence": "20260312_12:30",
+        "type": "Single"
+    },
+    "64": {
+        "question": "What day and time is the community bake sale taking place?",
+        "answer": "Sunday at 3 PM",
+        "evidence": "20260312_12:30",
+        "type": "Single"
+    },
+    "65": {
+        "question": "When does Li Hua request a delivery from Hailey Johnson?",
+        "answer": "Tuesday",
+        "evidence": "20260314_17:00",
+        "type": "Single"
+    },
+    "66": {
+        "question": "What is the address where Li Hua wants the bread delivery to be made?",
+        "answer": "123 Sunny Street",
+        "evidence": "20260314_17:00",
+        "type": "Single"
+    },
+    "67": {
+        "question": "What service does Hailey Johnson offer to Li Hua?",
+        "answer": "Doorstep delivery service for fresh milk and bread",
+        "evidence": "20260314_17:00",
+        "type": "Single"
+    },
+    "68": {
+        "question": "What time does Hailey Johnson start baking?",
+        "answer": "4 AM",
+        "evidence": "20260317_08:00",
+        "type": "Single"
+    },
+    "69": {
+        "question": "Where does Li Hua plan to meet Yuriko Yamamoto to show the final website?",
+        "answer": "Central Perk café",
+        "evidence": "20260317_15:30",
+        "type": "Single"
+    },
+    "70": {
+        "question": "What does Li Hua suggest to Hailey regarding the frequency of bread delivery?",
+        "answer": "Twice a week on Mondays and Fridays at 8am",
+        "evidence": "20260318_15:00",
+        "type": "Single"
+    },
+    "71": {
+        "question": "What does Li Hua agree to bring to the bonfire singing party hosted by Chae Song-hwa?",
+        "answer": "Li Hua will bring his guitar",
+        "evidence": "20260320_18:00",
+        "type": "Single"
+    },
+    "72": {
+        "question": "What is the focus of Li Hua's next month's fitness plan according to Jennifer?",
+        "answer": "Strengthening lower limbs",
+        "evidence": "20260325_19:00",
+        "type": "Single"
+    },
+    "73": {
+        "question": "What is the building's policy that Adam reminds Li Hua about?",
+        "answer": "Recycling policy",
+        "evidence": "20260328_15:00",
+        "type": "Single"
+    },
+    "74": {
+        "question": "What is the topic of the online tutorial Yuriko shares with the group?",
+        "answer": "Advanced drum techniques",
+        "evidence": "20260329_10:00",
+        "type": "Single"
+    },
+    "75": {
+        "question": "What is Wolfgang looking for in his new drums?",
+        "answer": "Something versatile that sounds good for both rock and softer tunes like The Beatles",
+        "evidence": "20260326_16:00",
+        "type": "Single"
+    },
+    "76": {
+        "question": "What song does Li Hua suggest for the jam session on 20260405?",
+        "answer": "Viva la Vida",
+        "evidence": "20260405_10:00",
+        "type": "Single"
+    },
+    "77": {
+        "question": "What does Li Hua think about the rosemary focaccia?",
+        "answer": "Li Hua thinks the rosemary focaccia is amazing",
+        "evidence": "20260331_14:00",
+        "type": "Single"
+    },
+    "78": {
+        "question": "When does Li Hua confirm the rent transfer to Adam?",
+        "answer": "20260331_17:00",
+        "evidence": "20260331_17:00",
+        "type": "Single"
+    },
+    "79": {
+        "question": "What joke does Wolfgang make as an April Fool's joke?",
+        "answer": "That Wolfgang bought a set of expensive drums",
+        "evidence": "20260401_15:00",
+        "type": "Single"
+    },
+    "80": {
+        "question": "Who is delivering the bread to Li Hua on 20260403?",
+        "answer": "Alice",
+        "evidence": "20260403_08:00",
+        "type": "Single"
+    },
+    "81": {
+        "question": "What does Li Hua think about improvisation during the jam session?",
+        "answer": "Improvisation sounds great",
+        "evidence": "20260402_19:00",
+        "type": "Single"
+    },
+    "82": {
+        "question": "When is ChaeSong-hwa hosting the community medical knowledge lecture?",
+        "answer": "7 PM on Saturday",
+        "evidence": "20260407_19:00",
+        "type": "Single"
+    },
+    "83": {
+        "question": "What topics will be covered in the community medical knowledge lecture?",
+        "answer": "Basics of common health issues and how to prevent them",
+        "evidence": "20260407_19:00",
+        "type": "Single"
+    },
+    "84": {
+        "question": "What new song does the Jolly band decide to work on for the jam session according to their discussion on 20260410?",
+        "answer": "Stand By Me",
+        "evidence": "20260410_11:00",
+        "type": "Single"
+    },
+    "85": {
+        "question": "What is Li Hua's feedback on Chae Song-hwa's medical knowledge lecture?",
+        "answer": "It is insightful and makes complex topics easy to understand",
+        "evidence": "20260411_21:00",
+        "type": "Single"
+    }
+}

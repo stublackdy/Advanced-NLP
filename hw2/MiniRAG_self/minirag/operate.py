@@ -5,6 +5,8 @@ from typing import Union
 from collections import Counter, defaultdict
 import warnings
 import json_repair
+import pandas as pd
+import io
 
 from .utils import (
     list_of_list_to_csv,
@@ -454,6 +456,9 @@ async def local_query(
             text_chunks_db,
             query_param,
         )
+
+    print("\n\n CONTEXT DONE \n\n")
+    print()
     if query_param.only_need_context:
         return context
     if context is None:
@@ -1403,7 +1408,7 @@ async def _build_mini_query_context(
 ```csv
 {text_units_context}
 ```
-"""
+""", entities_context, text_units_context
 
 
 async def minirag_query(  # MiniRAG
@@ -1448,7 +1453,7 @@ async def minirag_query(  # MiniRAG
             print(f"JSON parsing error: {e}")
             return PROMPTS["fail_response"]
 
-    context = await _build_mini_query_context(
+    context, entities_context, text_units_context = await _build_mini_query_context(
         entities_from_query,
         type_keywords,
         query,
@@ -1462,7 +1467,24 @@ async def minirag_query(  # MiniRAG
         query_param,
     )
 
+    # print("entities_context: ", entities_context)
+    # print("text_units_context: ", text_units_context)
+    # print(kk)
+    
+
+    # with open("/u/a/s/asinghal28/private/NLP/Advanced-NLP/hw2/MiniRAG_self/logs/entities_context.csv", "w", newline="", encoding="utf-8") as f:
+    #     f.write(entities_context)
+
+    # with open("/u/a/s/asinghal28/private/NLP/Advanced-NLP/hw2/MiniRAG_self/logs/text_units_context.csv", "w", newline="", encoding="utf-8") as f:
+    #     f.write(text_units_context)
+
+    df = pd.read_csv(io.StringIO(text_units_context))
+    context_json_data = df.to_json(orient="records")
+
+
+
     if query_param.only_need_context:
+        # print(type(context))
         return context
     if context is None:
         return PROMPTS["fail_response"]
@@ -1476,4 +1498,4 @@ async def minirag_query(  # MiniRAG
         system_prompt=sys_prompt,
     )
 
-    return response
+    return query, context_json_data,  sys_prompt, response
